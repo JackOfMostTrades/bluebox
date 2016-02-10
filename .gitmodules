@@ -1,0 +1,12 @@
+[submodule "dnslib/dnslib"]
+	path = dnslib/dnslib
+	url = https://github.com/paulchakravarti/dnslib.git
+[submodule "ldaptor/ldaptor"]
+	path = ldaptor/ldaptor
+	url = https://github.com/twisted/ldaptor.git
+[submodule "nbns/Responder"]
+	path = nbns/Responder
+	url = https://github.com/SpiderLabs/Responder.git
+[submodule "pykek/pykek"]
+	path = pykek/pykek
+	url = https://github.com/bidord/pykek
