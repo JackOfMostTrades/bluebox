@@ -1,12 +1,12 @@
 [submodule "dnslib/dnslib"]
-	path = dnslib/dnslib
+	path = evil_dc/dns/dnslib
 	url = https://github.com/paulchakravarti/dnslib.git
 [submodule "ldaptor/ldaptor"]
-	path = ldaptor/ldaptor
+	path = evil_dc/ldap/ldaptor
 	url = https://github.com/twisted/ldaptor.git
 [submodule "nbns/Responder"]
-	path = nbns/Responder
+	path = evil_dc/netbios/Responder
 	url = https://github.com/SpiderLabs/Responder.git
 [submodule "pykek/pykek"]
-	path = pykek/pykek
+	path = evil_dc/kdc/pykek
 	url = https://github.com/bidord/pykek
