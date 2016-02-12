@@ -1,0 +1,39 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          evil-server-kdc
+# Required-Start:    $local_fs
+# Required-Stop:     $local_fs
+# Should-Start:
+# Should-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Evil Server KDC
+# Description:
+### END INIT INFO
+
+NAME=evil-server-kdc
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DAEMON=/usr/bin/python
+PIDFILE=/var/run/$NAME.pid
+WD=/root/evil_dc/kdc
+DAEMON_ARGS="evil_server.py"
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+    start-stop-daemon --start --quiet --pidfile $PIDFILE --chdir $WD -m -b --exec $DAEMON -- $DAEMON_ARGS
+    ;;
+  stop)
+    start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile $PIDFILE --name $NAME
+    ;;
+  restart)
+    ;;
+  force-reload)
+    ;;
+  *)
+    echo "Usage: $0 start" >&2
+    exit 3
+    ;;
+esac
