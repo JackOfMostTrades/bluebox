@@ -1,0 +1,4 @@
+#!/bin/sh
+# /etc/network/if-up.d/ebtables
+ebtables -t nat -F
+ebtables -t nat -A PREROUTING -p IPv4 -d '!' ff:ff:ff:ff:ff:ff/ff:ff:ff:ff:ff:ff --in-interface eth0 -j redirect 

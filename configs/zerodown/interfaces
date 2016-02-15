@@ -1,0 +1,32 @@
+# /etc/network/interfaces
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+iface eth0 inet static
+    address 0.0.0.0
+
+iface eth1 inet static
+    address 0.0.0.0
+
+# There is probably some better way to make this work, but user-space scripts
+# need to know to respond on the br0 interface to packets siphoned off
+# the network. So this uses an arbitrarily picked IP with a large netmask
+# with the hope that it will cover the victim IP.
+
+auto br0
+iface br0 inet static
+    address 10.100.200.1
+    netmask 248.0.0.0
+    bridge_ports eth0 eth1
+    bridge_fd 0
+    bridge_waitport 0
+    bridge_stp off
+
