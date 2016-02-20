@@ -1,4 +1,4 @@
-Note; this repository makes references to external repositories (known as Git submodules). After cloning this repository, please make sure to the following commands to clone those submodules:
+Note; this repository makes references to external repositories (known as Git submodules). After cloning this repository, please make sure to run the following commands to clone those submodules:
 
     git submodule init
     git submodule update 
@@ -8,11 +8,11 @@ BlueBox
 
 BlueBox is a collection of scripts and configurations for the automated exploitation of [MS15-122](https://technet.microsoft.com/en-us/library/security/ms15-122.aspx) and [MS16-014](https://technet.microsoft.com/en-us/library/security/ms16-014.aspx), (see also [CVE-2015-6095](http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-6095) and [CVE-2016-0049](http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0049)).
 
-Additional information about this vulnerability can be found in the [BlackHat EU 2015 presentation and whitepaper](https://www.blackhat.com/eu-15/briefings.html#ian-haken) made on this topic.
+Additional information about this vulnerability can be found in the [BlackHat EU 2015 presentation and whitepaper](https://www.blackhat.com/eu-15/briefings.html#ian-haken) made on this topic, or the [updated talk](http://www.slideshare.net/ianhaken/attacking-windows-authentication-and-bitlocker-full-disk-encryption) presented at BSides Seattle 2015.
 
 This exploit allows an attacker to bypass the login screen of Windows machines using domain authentication. This can be used to read a user's data, bypassing full disk encryption protections, to quickly attack unattended machines in order to plant a remote access toolkit or other malware, and can be used to do either of the above without taking the machine offline.
 
-A demonstration of these tools was made at [BSides Seattle 2016](http://www.securitybsides.com/w/page/103147483/BsidesSeattle2015); stay tuned for a recorded video demo!
+A demonstration of these tools was made at [BSides Seattle 2015](http://www.securitybsides.com/w/page/103147483/BsidesSeattle2015); stay tuned for recorded video demos!
 
 This repository includes some init-scripts and configuration files for deployment of these scripts on a Debian-based system (the aforementioned demo runs on [Raspbian](https://www.raspbian.org/), a Debian distribution for the Raspberry Pi). However, there is no particular need to run these tools on that platform; you could just as easily configure a regular laptop and arbitrary operating system to run these Python scripts and a DHCP server.
 
