@@ -12,7 +12,13 @@ Additional information about this vulnerability can be found in the [BlackHat EU
 
 This exploit allows an attacker to bypass the login screen of Windows machines using domain authentication. This can be used to read a user's data, bypassing full disk encryption protections, to quickly attack unattended machines in order to plant a remote access toolkit or other malware, and can be used to do either of the above without taking the machine offline.
 
-A demonstration of these tools was made at [BSides Seattle 2015](http://www.securitybsides.com/w/page/103147483/BsidesSeattle2015); stay tuned for recorded video demos!
+For a quick demostration, I've recorded the following videos:
+
+BlueBox: Opportunistic Laptop Attack  
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=LT0Z9asOedM" target="_blank"><img src="http://img.youtube.com/vi/LT0Z9asOedM/0.jpg" alt="BlueBox: Opportunistic Laptop Attack" width="240" height="180" border="10" /></a>
+
+BlueBox: Zero-Downtime Attack  
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=cz6PgGEw4_Y" target="_blank"><img src="http://img.youtube.com/vi/cz6PgGEw4_Y/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 This repository includes some init-scripts and configuration files for deployment of these scripts on a Debian-based system (the aforementioned demo runs on [Raspbian](https://www.raspbian.org/), a Debian distribution for the Raspberry Pi). However, there is no particular need to run these tools on that platform; you could just as easily configure a regular laptop and arbitrary operating system to run these Python scripts and a DHCP server.
 
